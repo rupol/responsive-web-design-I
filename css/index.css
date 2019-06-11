@@ -1,3 +1,442 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.container {
+  margin: 0 auto;
+  width: 880px;
+}
+
+/* NAVIGATION */
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 5;
+
+  background-color: rgb(85, 91, 100);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #c4c4c4;
+  padding: 0 40px;
+  font-size: 14px;
+}
+
+.navigation a:hover {
+  color: #028ade;
+}
+
+/* STRUCTURE */
+.half {
+  width: 50%;
+  padding-right: 5px;
+}
+
+.third {
+  width: 33.33%;
+  padding-right: 10px;
+}
+
+.middle-img {
+  width: 100%;
+}
+
+/* HEADER */
+
+.main-header {
+  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 75px;
+  text-align: center;
+  margin: 98px 0 0 50px;
+  letter-spacing: 5px;
+}
+
+header button {
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid black;
+
+  margin: 17px 0 0 150px;
+  padding: 7px 40px;
+  letter-spacing: 1.1px;
+}
+
+.btn {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+  margin: 40px 0 0px 60px;
+}
+
+/* TOP CONTENT */
+
+.top-content {
+  border-top: 1px solid black;
+  margin: 75px 0 45px 0;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* BOTTOM CONTENT */
+
+.bottom-content {
+  margin: 36px -22px 46px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact {
+  margin-top: 57px;
+  border-top: 1px solid black;
+  padding-top: 40px;
+}
+
+.contact p {
+  margin: 20px 0;
+}
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  margin: 55px 0;
+}
+
+/* ////////////////////////////////////// */
+/* SERVICES PAGE */
+/* ////////////////////////////////////// */
+
+/* HEADER */
+
+.services-header {
+  margin: 85px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.25;
+}
+
+.services-header-img {
+  margin: 0 0 30px;
+}
+
+.services-h1 {
+  font-size: 28px;
+  align-self: flex-start;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+
+/* MAIN CONTENT */
+
+.services__main-content {
+  height: 915px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+}
+
+.services-box {
+  border: 1px solid black;
+  background: #f4f3f4;
+  width: 420px;
+  height: 250px;
+  padding: 22px;
+  line-height: 1.2;
+}
+
+.learn-button {
+  background: white;
+  border: 1px solid black;
+  margin-top: 25px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 8px;
+  width: 140px;
+}
+
+/* BOTTOM CONTENT */
+
+.services__bottom-content {
+  border-top: 1px solid black;
+  padding: 45px 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services__bottom-content .half {
+  width: 48%;
+}
+
+.services__bottom-content h2 {
+  margin-bottom: 20px;
+}
+
+.services__bottom-content p {
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.services__bottom-content ul {
+  list-style-type: square;
+  list-style-position: inside;
+  line-height: 1.9;
+}
+
+/* ////////////////////////////////////// */
+/* PRODUCT PAGE */
+/* ////////////////////////////////////// */
+
+/* HEADER */
+
+.product-header {
+  margin: 100px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.25;
+}
+
+.product-h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.product-header p {
+  margin-bottom: 20px;
+}
+
+.product-header-img {
+  margin: 0;
+}
+
+/* MAIN CONTENT */
+
+.product__main-content {
+  border-top: 1px solid black;
+}
+
+.product__main-content h2 {
+  font-size: 48px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.product__features-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  height: 800px;
+}
+
+.features-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+}
+
+.features-caption {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.images-container:hover .features-caption {
+  color: black;
+  transform: translateY(-150px);
+  transition: 0.5s ease;
+}
+
+.images-container:hover .features-img {
+  -webkit-filter: opacity(20%);
+  /* Safari 6.0 - 9.0 */
+  filter: opacity(20%);
+}
