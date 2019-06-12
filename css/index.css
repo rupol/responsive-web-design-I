@@ -164,7 +164,7 @@ h5 {
 
 @media (max-width: 880px) {
   .container {
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -278,6 +278,7 @@ header button {
 
   header h1 {
     display: block;
+    margin-top: 55px;
   }
 
   header img {
@@ -294,6 +295,19 @@ header button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+@media (max-width: 880px) {
+  .top-content {
+    margin: 25px 10px 30px 10px;
+    padding-top: 35px;
+    justify-content: space-between;
+  }
+
+  .top-content .half {
+    width: 49%;
+    line-height: 1.15;
+  }
 }
 
 /* BOTTOM CONTENT */
@@ -315,9 +329,30 @@ header button {
 }
 
 footer {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-  margin: 55px 0;
+  margin: 30px 0;
+}
+
+@media (max-width: 880px) {
+  .bottom-content {
+    margin: 27px 0px 36px 0;
+    justify-content: space-around;
+  }
+
+  .bottom-content .third {
+    width: 30%;
+    padding-right: 15px;
+    line-height: 1.15;
+  }
+
+  .contact {
+    padding: 35px 0 0 10px;
+  }
+
+  .contact p {
+    margin: 20px 0;
+  }
 }
 
 /* ////////////////////////////////////// */
