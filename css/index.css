@@ -159,11 +159,17 @@ h5 {
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 .container {
   margin: 0 auto;
-  width: 880px;
+  max-width: 880px;
+}
+
+@media (max-width: 880px) {
+  .container {
+    width: 100%;
+  }
 }
 
 /* NAVIGATION */
-.navigation {
+.sticky-nav {
   position: fixed;
   top: 0;
   width: 100%;
@@ -180,12 +186,28 @@ h5 {
 .navigation a {
   text-decoration: none;
   color: #c4c4c4;
-  padding: 0 40px;
   font-size: 14px;
+  padding: 30px;
 }
 
 .navigation a:hover {
   color: #028ade;
+}
+
+@media (max-width: 880px) {
+  .sticky-nav {
+    height: 145px;
+    flex-direction: column-reverse;
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  .navigation a {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 500px) {
 }
 
 /* STRUCTURE */
@@ -212,20 +234,24 @@ h5 {
   justify-content: center;
 }
 
+.welcome-text {
+  text-align: center;
+  margin-top: 50px;
+}
+
 header h1 {
   font-size: 75px;
-  text-align: center;
-  margin: 98px 0 0 50px;
-  letter-spacing: 5px;
+  display: inline-block;
+  margin-top: 48px;
 }
 
 header button {
   font-size: 16px;
   background-color: white;
   border: 1px solid black;
+  display: inline-block;
 
-  margin: 17px 0 0 150px;
-  padding: 7px 40px;
+  padding: 7px 37px;
   letter-spacing: 1.1px;
 }
 
@@ -245,15 +271,25 @@ header button {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-header img {
-  margin: 40px 0 0px 60px;
+@media (max-width: 880px) {
+  .welcome-text {
+    width: 100%;
+  }
+
+  header h1 {
+    display: block;
+  }
+
+  header img {
+    display: none;
+  }
 }
 
 /* TOP CONTENT */
 
 .top-content {
   border-top: 1px solid black;
-  margin: 75px 0 45px 0;
+  margin: 75px 0 35px 0;
   padding-top: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -263,14 +299,13 @@ header img {
 /* BOTTOM CONTENT */
 
 .bottom-content {
-  margin: 36px -22px 46px 0;
+  margin: 30px 0px 46px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .contact {
-  margin-top: 57px;
   border-top: 1px solid black;
   padding-top: 40px;
 }
